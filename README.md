@@ -4,6 +4,8 @@ Computation of incremental capacity curves using various smoothing methods, and 
 
 This repository accompanies the publication by Flores and Clark [DOI: XXXX](YYYYY)
 
+The datasets used can be found at the Zenodo repoisory [(10.5281/zenodo.19107295)](https://doi.org/10.5281/zenodo.19107295).
+
 # Structure
 * `dqdvs.py`: functions to compute incremental capacity curves using various methods.
 
