@@ -89,10 +89,7 @@ def compute_monotonic_ocv(q:np.ndarray, v:np.ndarray, epsilon:float):
 def dqdv_histogram(q:np.ndarray, v:np.ndarray, bin_size:float, smooth:bool=False)->tuple[np.ndarray, np.ndarray]:
     
     """
-    Compute a smoothed differential capacity (dQ/dV) curve using a histogram-based method.
-
-    This approach avoids numerical differentiation by binning voltage values and scaling
-    by the total capacity range. An optional Gaussian filter is applied for smoothing.
+    Compute a differential capacity (dQ/dV) curve using a histogram-based method.
 
     Args:
         q (np.ndarray): Array of capacity values (monotonic).
