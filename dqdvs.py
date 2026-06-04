@@ -1,4 +1,4 @@
-import polars as pl
+from typing import Optional
 import numpy as np
 import scipy as sp
 
@@ -86,7 +86,7 @@ def compute_monotonic_ocv(q:np.ndarray, v:np.ndarray, epsilon:float):
 
 
 
-def dqdv_histogram(q:np.ndarray, v:np.ndarray, bin_size:float, smooth:bool=False)->tuple[np.ndarray, np.ndarray]:
+def dqdv_histogram(q:np.ndarray, v:np.ndarray, bin_size:Optional[float] = None, nbins:Optional[int] = None, smooth:bool=False)->tuple[np.ndarray, np.ndarray]:
     
     """
     Compute a differential capacity (dQ/dV) curve using a histogram-based method.
@@ -95,6 +95,8 @@ def dqdv_histogram(q:np.ndarray, v:np.ndarray, bin_size:float, smooth:bool=False
         q (np.ndarray): Array of capacity values (monotonic).
         v (np.ndarray): Array of voltage values corresponding to `q`.
         bin_size (float): Width of voltage bins for histogram computation.
+        nbins (int): Number of bins for histogram computation. If provided, it overrides `bin_size`.
+        smooth (bool): Whether to apply Gaussian smoothing to the resulting dQ/dV values.
 
     Returns:
         tuple[np.ndarray, np.ndarray]:
@@ -102,7 +104,11 @@ def dqdv_histogram(q:np.ndarray, v:np.ndarray, bin_size:float, smooth:bool=False
             - counts (np.ndarray): Smoothed dQ/dV values for each bin.
     """
 
-    nbins = int((v.max()-v.min())/bin_size)
+    if bin_size is None and nbins is None:
+        raise ValueError("Either bin_size or nbins must be provided.")
+
+    if nbins is None:
+        nbins = int((v.max()-v.min())/bin_size)
 
     counts, bin_edges = np.histogram(v, bins=nbins, density=True)
 
