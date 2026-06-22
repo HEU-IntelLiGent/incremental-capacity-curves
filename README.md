@@ -12,13 +12,13 @@ If you use any of the functions or scripts, please cite the publication at [10.1
 
 # Structure
 * `dqdvs.py`: functions to compute incremental capacity curves using various methods.
-
+* * `dqdv_metrics.py`: functions to compute metrics to quantify the quality of voltage reconstruciton.
 * `fig_dqdvs_*.ipynb`: notebooks with figures for the manuscript.
+* `/figures`: figures produced by the notebooks, used in the manuscript.
 
 # Quickstart
 1. Clone this repository
 2. Navigate to the root of your local clone, create a virtual environment and install all dependencies.
-
 
 Using uv (preferred)
 ```bash
