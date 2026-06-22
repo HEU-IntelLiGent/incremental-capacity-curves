@@ -2,9 +2,9 @@
 
 Computation of incremental capacity curves using various smoothing methods, and using a histogram-based method, inspired by Feng et al. [DOI: 10.1016/j.jpowsour.2013.01.018](http://doi.org/10.1016/j.jpowsour.2013.01.018)
 
-This repository accompanies the publication by Flores and Clark [DOI: XXXX](YYYYY)
+This repository accompanies the publication Flores et al 2026 J. Electrochem. Soc. at [10.1149/1945-7111/ae7e5c](https://doi.org/10.1149/1945-7111/ae7e5c)
 
-The datasets used can be found at the Zenodo repoisory [(10.5281/zenodo.19107295)](https://doi.org/10.5281/zenodo.19107295).
+The datasets used can be found at the Zenodo repoisory at [10.5281/zenodo.20086298](https://doi.org/10.5281/zenodo.20086298).
 
 # Structure
 * `dqdvs.py`: functions to compute incremental capacity curves using various methods.
@@ -34,6 +34,8 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 ```
+3. Run the notebooks to reproduce the figures of the main article. OR
+4. Re-use the code in `dqdvs.py` and `dqdv_metrics.py` to compute IC curves and reconstruction metrics, respectively.
 
 # License
 MIT License
