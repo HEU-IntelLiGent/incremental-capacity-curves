@@ -1,4 +1,9 @@
+# SPDX-License-Identifier: MIT
+# License: MIT. See LICENSE file for details.
+# If you use this script, please cite: Flores et al 2026 J. Electrochem. Soc. https://doi.org/10.1149/1945-7111/ae7e5c.
+
 from typing import Optional
+import polars as pl
 import numpy as np
 import scipy as sp
 
