@@ -6,6 +6,10 @@ This repository accompanies the publication Flores et al 2026 J. Electrochem. So
 
 The datasets used can be found at the Zenodo repoisory at [10.5281/zenodo.20086298](https://doi.org/10.5281/zenodo.20086298).
 
+# Citation
+
+If you use any of the functions or scripts, please cite the publication at [10.1149/1945-7111/ae7e5c](https://doi.org/10.1149/1945-7111/ae7e5c)
+
 # Structure
 * `dqdvs.py`: functions to compute incremental capacity curves using various methods.
 
